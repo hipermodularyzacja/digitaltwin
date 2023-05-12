@@ -36,7 +36,11 @@ class Node(val modules: List<Module>) {
 }
 
 
-class Module(val name: String) {
+class Module(val context: String, val contents: List<Content>) {
+    
+}
+
+class Content(val content: String) {
         
     fun addContent(content: Content) {
         contents += content
@@ -48,3 +52,11 @@ class Module(val name: String) {
 }
 
 ```
+
+
+przykład w oparciu o system regałów, skrzynek, zawartości:
+
+Network: środowisko, pokój, samochód
+Node: regał, półka, szerokość, wysokość
+Module: Skrzynka, 
+Zawartość: Context: HDMI, USB, RPI (kable, zasilacze, płyty, obudowy)
